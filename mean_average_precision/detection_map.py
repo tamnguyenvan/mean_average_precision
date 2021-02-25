@@ -147,7 +147,7 @@ class DetectionMAP:
         fig, axes = plt.subplots(nrows=grid, ncols=grid)
         mean_average_precision = []
         # TODO: data structure not optimal for this operation...
-        for i, ax in enumerate(axes.flat):
+        for i, ax in enumerate(axes):
             if i > self.n_class - 1:
                 break
             precisions, recalls = self.compute_precision_recall_(i, interpolated)
